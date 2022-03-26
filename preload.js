@@ -6,7 +6,8 @@ contextBridge.exposeInMainWorld(
         inicioCorrecto: (callback) => ipcRenderer.on('inicioCorrecto', callback),
         editar_r: (datos) => ipcRenderer.send('editar_r', datos),
         solicitar_perdido: (datos) => ipcRenderer.send('solicitar_perdido', datos),
-        guardar_f: (datos) => ipcRenderer.send('guardar_f', datos)
+        guardar_f: (datos) => ipcRenderer.send('guardar_f', datos),
+        realizar_pedido: (datos) => ipcRenderer.send('realizar_pedido', datos)
     }
 
 )

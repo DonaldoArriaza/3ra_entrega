@@ -10,9 +10,21 @@
 </head>
 
 <body>
-    <h1>Pedidos</h1>
-    <input id="r_pedido" type="submit" value="Realizar pedido" />
-    <script type="text/javascript" src="pedidos.html"></script>
+    <form id="r_pedido">
+        <label for="codigo">Codigo:</label>
+        <input type="text" id="codigo" value="2">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" value="Cereal">
+        <label for="proveedor">Proveedor:</label>
+        <select id="proveedor">
+            <option value="1">CMI</option>
+        </select>
+        <label for="existencia">Cantidad:</label>
+        <input type="text" id="existencia" value="0">
+        <br>
+        <input type="submit" value="Realizar pedido" />
+    </form>
+    <script type="text/javascript" src="pedidos.js"></script>
 </body>
 
 </html>
