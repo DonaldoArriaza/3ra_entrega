@@ -30,7 +30,7 @@ input[type="reset"]{
     float: left;
 }
 
-input[type="submit"] {
+#form-buttons {
     clear: both;
     display: block;
 }

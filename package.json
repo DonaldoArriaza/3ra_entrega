@@ -1,5 +1,5 @@
 {
-    "name": "2da_entrega",
+    "name": "3ra_entrega",
     "version": "1.0.0",
     "description": "",
     "main": "main.js",
@@ -13,6 +13,7 @@
         "electron": "^17.1.2"
     },
     "dependencies": {
+        "bcrypt": "^5.0.1",
         "mysql2": "^2.3.3"
     }
 }

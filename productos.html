@@ -10,31 +10,20 @@
 </head>
 
 <body>
-    <div id="usuario_actual"></div>
-    <table id="tabla_productos">
-        <tr>
-            <th></th>
-            <th>Codigo</th>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Categoria</th>
-            <th>Exitencia</th>
-        </tr>
-        <td><input type="checkbox" checked ></td>
-        <td>2</td>
-        <td>Cereal</td>
-        <td>Cereal de hojuelas de maiz horneado.</td>
-        <td>Alimentos</td>
-        <td>450</td>
+    <button id="consultar">Consultar</button>
 
+    <table id="tabla_productos">
+        <thead>
+            <tr>
+                <th scope="col">Codigo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Existencia</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
     </table>
-    <br>
-    <form id="editar">
-        <input type="submit" value="Editar" />
-    </form>
-    <form id="s_pedido">
-        <input type="submit" value="Solicitar pedido" />
-    </form>
     <script type="text/javascript" src="productos.js"></script>
 </body>
 
