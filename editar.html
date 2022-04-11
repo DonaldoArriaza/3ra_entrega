@@ -13,7 +13,7 @@
 
 <body>
     <form id="guardar">
-        <div class="form-group">
+        <div class="form-group row">
             <label for="codigo">Codigo:</label>
             <input type="text" id="codigo" disabled required>
             <label for="nombre">Nombre:</label>
@@ -22,15 +22,18 @@
             <input type="text" id="descripcion" required>
             <label for="categoria">Categoria:</label>
         </div>
-        <div>
+        <div class="form-group row">
             <select id="categoria">
         <option value="" id="categoriaO" selected></option>
     </select>
             <label for="existencia">Existencia:</label>
             <input type="text" id="existencia" required>
-        </div class="form-group">
-        <input type="reset" value="Limpiar" />
-        <input type="submit" value="Guardar" />
+        </div>
+        <br>
+        <input class="btn btn-primary" type="submit" value="Guardar" />
+        <input class="btn btn-primary" type="reset" value="Limpiar" />
+
+
     </form>
     <script type="text/javascript" src="editar.js"></script>
 </body>
