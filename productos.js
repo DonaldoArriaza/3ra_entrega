@@ -57,14 +57,17 @@ function editarProducto(event) {
     let id = fila.children[0].innerHTML
     let nombre = fila.children[1].innerHTML
     let descripcion = fila.children[2].innerHTML
-    let existencia = fila.children[3].innerHTML
+    let tipoCategoria = fila.children[3].innerHTML
+    let existencia = fila.children[4].innerHTML
     let seleccion = {
         id: id,
         nombre: nombre,
         descripcion: descripcion,
+        tipoCategoria: tipoCategoria,
         existencia: existencia
     }
     console.log(seleccion)
     window.comunicacion.editarProducto(seleccion)
+
 
 }

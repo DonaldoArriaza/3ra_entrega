@@ -128,12 +128,24 @@ ipcMain.on('consultarDatos', function(event, args) {
         })
 })
 
+
 ipcMain.on('editarProducto', function(event, args) {
     console.log(args)
     createWindow3()
     ventana3.webContents.on('did-finish-load', function() {
         ventana3.webContents.send('productoAEditar', args)
     })
+})
+
+ipcMain.on('consultarCat', function(event, args) {
+    conexion.promise().query('select * from categoria')
+        .then(
+            ([result, fields]) => {
+                ventana3.webContents.send('respuestaCat', result)
+            })
+        .catch((err) => {
+            console.log(err)
+        })
 })
 
 ipcMain.on('solicitar_perdido', function(event, args) {
