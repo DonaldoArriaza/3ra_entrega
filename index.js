@@ -11,10 +11,8 @@ formulario.addEventListener('submit', function(evento) {
     window.comunicacion.registroIncorrecto(function(event, args) {
         alert(args)
     })
-
-
 })
 
-nuevo.addEventListener('click', function () {
+nuevo.addEventListener('click', function() {
     window.comunicacion.nuevoRegistro([usuario.value, pass.value])
 })
