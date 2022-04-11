@@ -19,6 +19,7 @@ window.comunicacion.productoAEditar(function(event, args) {
     id_print.value = args.id
 })
 
+
 document.addEventListener("DOMContentLoaded", function() {
     window.comunicacion.consultarCat()
 })
