@@ -2,6 +2,7 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path')
 const mysql = require('mysql2');
 const bcrypt = require('bcrypt');
+const { create } = require('domain');
 const saltRounds = 10;
 
 
@@ -52,7 +53,7 @@ let ventana3;
 function createWindow3() {
     ventana3 = new BrowserWindow({
         width: 400,
-        height: 300,
+        height: 500,
         webPreferences: {
             preload: path.join(app.getAppPath(), 'preload.js')
         }
@@ -146,6 +147,15 @@ ipcMain.on('consultarCat', function(event, args) {
         .catch((err) => {
             console.log(err)
         })
+})
+
+
+ipcMain.on('guardarProducto', function(event, args) {
+    console.log(args)
+    conexion.promise().execute('UPDATE producto SET nombre = ?, categoria_idCategoria = ?, existencia = ? WHERE (idProducto = ?)', [args.nombre, args.categoriaId, args.existencia, args.id])
+    createWindow2()
+    ventana.webContents.send('recibirDatosNuevos', args)
+
 })
 
 ipcMain.on('solicitar_perdido', function(event, args) {

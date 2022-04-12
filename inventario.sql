@@ -60,7 +60,7 @@ CREATE TABLE `categoria` (
 
 LOCK TABLES `categoria` WRITE;
 /*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
-INSERT INTO `categoria` VALUES (1,'Alimentos'),(2,'Celulares'),(3,'Cuadado Personal');
+INSERT INTO `categoria` VALUES (1,'Alimentos'),(2,'Celulares'),(3,'Cuidado Personal');
 /*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -563,4 +563,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-07 18:28:24
+-- Dump completed on 2022-04-11 22:15:09

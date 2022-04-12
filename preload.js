@@ -18,7 +18,8 @@ contextBridge.exposeInMainWorld(
         recibirCategoria: (callback) => ipcRenderer.on('recibirCategoria', callback),
         productoAEditar: (callback) => ipcRenderer.on('productoAEditar', callback),
         guardarProducto: (datos) => ipcRenderer.send('guardarProducto', datos),
-        recibirDatosNuevos: (callback) => ipcRenderer.on('recibirDatosNuevos', callback)
+        recibirDatosNuevos: (callback) => ipcRenderer.on('recibirDatosNuevos', callback),
+        actualizarProducto: (datos) => ipcRenderer.send('actualizarProducto', datos)
     }
 
 )

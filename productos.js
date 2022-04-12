@@ -68,6 +68,5 @@ function editarProducto(event) {
     }
     console.log(seleccion)
     window.comunicacion.editarProducto(seleccion)
-
-
+    window.close()
 }

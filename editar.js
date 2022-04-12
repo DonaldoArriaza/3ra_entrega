@@ -29,14 +29,24 @@ window.comunicacion.respuestaCat(function(event, args) {
     console.log(args)
     args.forEach(item => {
         let op = document.createElement('option')
-        op.value = item.idCateria
+        op.value = item.idCategoria
         op.innerHTML = item.tipoCategoria
         categoriaBD.appendChild(op)
     })
 })
 
-guardar.addEventListener('submit', function(evento) {
-    evento.preventDefault()
-    window.comunicacion.guardar_f();
+
+guardar.addEventListener('submit', function(event) {
+    let actualizacion = {
+        id: codigo.value,
+        nombre: nombre.value,
+        existencia: existencia.value,
+        categoriaId: parseInt(categoriaBD.value, 10),
+        cateogria: categoriaBD.options[categoriaBD.selectedIndex].text
+    }
+    window.comunicacion.guardarProducto(actualizacion)
     window.close()
+
+
+
 })
